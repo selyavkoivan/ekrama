@@ -1,0 +1,8 @@
+﻿.idea
+.vs
+.gitignore
+clotheshop.sln.DotSettings.user
+clotheshop/appsettings.json
+clotheshop/obj
+clotheshop/bin
+clotheshop/Properties

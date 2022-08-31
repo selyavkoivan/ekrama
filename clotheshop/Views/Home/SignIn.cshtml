@@ -1,0 +1,60 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Localization
+@using clotheshop.Models.User.UserDto
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.Extensions.Options
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> locOptions
+
+@model UserDto  
+
+<meta charset="UTF-8"/>
+<title>@Localizer["sign-up"]</title>
+
+
+<form asp-action="SignUp" method="post" asp-controller="Home">
+<h3>@Localizer["signup"]</h3>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="username-addon">@@</span>
+        </div>
+        <input required type="text" class="form-control" placeholder="@Localizer["username"]"
+               aria-label="@Localizer["username"]"
+               aria-describedby="username-addon" asp-for="username">
+    </div>
+    @if (!ViewData.ModelState.IsValid && ViewData.ModelState["Username"].Errors.Count > 0)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <strong>@ViewData.ModelState["Username"].Errors.First().ErrorMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span role="button" class="input-group-text" id="password-addon">
+                <p class="m-0">
+                    <i class="fa-solid fa-eye"></i>
+                </p>
+            </span>
+        </div>
+        <input required type="password" class="form-control" placeholder="@Localizer["password"]"
+               aria-label="@Localizer["password"]"
+               aria-describedby="password-addon" asp-for="password">
+    </div>
+    @if (!ViewData.ModelState.IsValid && ViewData.ModelState["Password"].Errors.Count > 0)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <strong>@ViewData.ModelState["Password"].Errors.First().ErrorMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <input type="submit" class="btn btn-primary col-12 p-2"/>
+
+</form>

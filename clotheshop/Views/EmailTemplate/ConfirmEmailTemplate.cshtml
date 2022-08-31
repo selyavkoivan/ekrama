@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model string
+
+
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body style="background: white; width: 400px;">
+<header style="background: @Localizer["background-color"]">
+    <h1 style="text-align: center; color: @Localizer["color"]">@Localizer["title"]</h1>
+</header>
+<div style="padding: 20px">
+
+    <p style="font-size: 20px">@Localizer["body"]</p>
+</div>
+<footer style="background: white">
+    <div style="background: url(@Localizer["image"]) center; background-size: @Localizer["width"]">
+        <a style="margin:auto; display: block; text-decoration: none; padding: 10px; width: 160px; 
+        text-align: center; border: 1px solid #000; background: white; color: black" href="@Model">@Localizer["click"]</a>
+    </div>
+</footer>
+</body>
+
+</html>

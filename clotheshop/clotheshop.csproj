@@ -1,0 +1,151 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MimeKit" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Views\Home\index.be-by.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>index.be-by.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Home\index.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>index.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Home\index.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>index.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Home\Settings.be.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Settings.be.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Controllers\HomeController.be-by.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeController.be-by.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Controllers\HomeController.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeController.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Controllers\HomeController.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeController.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.uk-ua.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmEmailTemplate.uk-ua.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.be.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmEmailTemplate.be.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.be-by.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmEmailTemplate.be-by.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmEmailTemplate.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.la.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmEmailTemplate.la.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmEmailTemplate.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Views\Home\index.be-by.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>resource.by.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\Home\index.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>resource.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\Home\index.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>recource.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\Home\Settings.be.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.be.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Controllers\HomeController.be-by.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>index.be-by.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Controllers\HomeController.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>index.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Controllers\HomeController.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>index.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.uk-ua.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmEmailTemplate.uk-ua.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.be.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmEmailTemplate.be.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.be-by.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmEmailTemplate.be-by.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmEmailTemplate.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.la.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmEmailTemplate.la.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Views\EmailTemplate\ConfirmEmailTemplate.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmEmailTemplate.en.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>bin\Debug\net6.0\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
